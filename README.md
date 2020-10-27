@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/appicon_256.png" width="200px" align="center" />
+  <img src="https://github.com/grotius-cnc/mayo/blob/develop/mayo.png" width="200px" align="center" />
 </p>
 
 # What is Mayo
