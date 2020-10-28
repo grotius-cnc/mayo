@@ -124,13 +124,29 @@ LIBS += -lTKSTEP -lTKXDESTEP -lTKXDEIGES
 # -- STL support
 LIBS += -lTKSTL
 # -- OBJ/glTF support
-minOpenCascadeVersion(7, 4, 0) {
-    LIBS += -lTKRWMesh
-} else {
-    SOURCES -= \
-        src/base/io_occ_base_mesh.cpp \
-        src/base/io_occ_gltf.cpp \
-        src/base/io_occ_obj.cpp
-}
+
+#minOpenCascadeVersion(7, 4, 0) {
+#    LIBS += -lTKRWMesh
+#} else {
+#    SOURCES -= \
+#        src/base/io_occ_base_mesh.cpp \
+#        src/base/io_occ_gltf.cpp \
+#        src/base/io_occ_obj.cpp
+#}
+
 # -- VRML support
 LIBS += -lTKVRML
+
+# Skynet comments and addons :
+
+# I used the opencascadelib : https://github.com/grotius-cnc/oce.git
+# Read how to compile and install, it works quite easy : https://github.com/grotius-cnc/oce/blob/master/BUILD.Unix.md
+# Be sure you delete old opencascade libs to avoid conflicts by :
+# $ sudo apt remove libocct-*
+# $ sudo apt remove liboce-*
+
+LIBS += -lTKRWMesh
+# I dowloaded the oce repro into my download folder, specify your installation path : INCLUDEPATH += /your path here.. /opencascade-7.4.0/inc/ \
+INCLUDEPATH += /home/user/Downloads/opencascade-7.4.0/inc/ \
+# This would stay the same
+LIBS += -L/usr/local/lib/ \
