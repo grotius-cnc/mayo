@@ -5,6 +5,10 @@
 # What is Mayo
 Mayo is a 3D viewer and converter inspired by FreeCad
 
+Made compatible for Linux Debian 10 buster with QT.
+See the end of the .pro file how to install opencascade and how to link your path.
+Have fun ! 
+
 # Overview
 * View and convert 3D files in different formats
 * Explore assembly trees and view properties
